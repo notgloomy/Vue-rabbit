@@ -16,5 +16,7 @@ categoryStore.getCategory()
   <LayoutNav />
   <LayoutHeader />
   <RouterView />
+  <!-- 添加key 破坏复用机制 强制重新销毁-->
+  <!-- <RouterView :key="$route.fullPath"/> -->
   <LayoutFooter />
 </template>
