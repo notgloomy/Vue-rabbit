@@ -21,10 +21,20 @@ const router = createRouter({
       {
         path:'category/sub/:id',
         component: () => import('@/views/SubCategory/index.vue')
+      },
+      {
+        path:'detail/:id',
+        component: () => import('@/views/Detail/index.vue')
       }
     ]
    }
-  ]
+  ],
+  // 路由滚动行为配置项
+  scrollBehavior () {
+    return {
+      top: 0
+    }
+  }
 })
 
 export default router
