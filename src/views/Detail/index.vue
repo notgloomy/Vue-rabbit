@@ -70,8 +70,8 @@ getGoods()
               <p class="g-name"> {{ goods.name }} </p>
               <p class="g-desc"> {{ goods.desc }} </p>
               <p class="g-price">
-                <span>{{ goods.oldPrice }}</span>
                 <span>{{ goods.price }}</span>
+                <span>{{ goods.oldPrice }}</span>
               </p>
               <div class="g-service">
                 <dl>
@@ -124,9 +124,9 @@ getGoods()
             <!-- 24热榜+专题推荐 -->
             <div class="goods-aside">
                 <!-- 24小时 -->
-                <DetailHot></DetailHot>
+                <DetailHot :hot-type="1"></DetailHot>
                 <!-- 周 -->
-                <DetailHot></DetailHot>
+                <DetailHot :hot-type="2"></DetailHot>
             </div>
           </div>
         </div>
