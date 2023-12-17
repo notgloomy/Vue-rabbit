@@ -15,3 +15,14 @@ export const insertCartAPI = ({ skuId,count }) => {
 
 // 获取最新购物车列表
 export const findNewCartListAPI = () => httpInstance.get('/member/cart')
+
+// 删除购物车
+export const delCartAPI = ( ids ) => {
+    return httpInstance({
+        url:'/member/cart',
+        method:'DELETE',
+        data: {
+          ids
+        }
+    })
+}
