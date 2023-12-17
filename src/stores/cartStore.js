@@ -42,13 +42,24 @@ export const useCartStore = defineStore('cart', () => {
     const allCount = computed(() =>cartList.value.reduce((a,c) => a + c.count,0))
     // 2.总的价格  所有项的count*price之和
     const allPrice = computed(() =>cartList.value.reduce((a,c) => a + c.count*c.price,0))
+    
+    // 是否全选
+    const isAll = computed(() => cartList.value.every((item) => item.selected))
+    
+    // 全选功能
+    const allCheck = (selected) => {
+        cartList.value.forEach(item => item.selected = selected)
+    }
+
     return {
         cartList,
         addCart,
         delCart,
         allCount,
         allPrice,
-        singleCheck
+        singleCheck,
+        isAll,
+        allCheck
     }
 },{
     persist: true
