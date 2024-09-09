@@ -1,6 +1,6 @@
 <script setup>
 import HomePanel from './HomePanel.vue'
-import { getGoodsAPI } from '@/apis/home'
+import { getGoodsAPI } from '@/apis/Home'
 import { ref } from 'vue'
 import GoodItems from './GoodItems.vue'
 

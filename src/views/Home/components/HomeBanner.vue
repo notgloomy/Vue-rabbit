@@ -11,7 +11,7 @@ const getBanner = async () => {
 } 
 getBanner()
 </script>
-
+//轮播图
 
 
 <template>

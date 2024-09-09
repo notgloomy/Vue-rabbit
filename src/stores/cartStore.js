@@ -52,7 +52,7 @@ export const useCartStore = defineStore('cart', () => {
         }
         
     }
-
+    // 清空购物车
     const clearCart = () => {
         cartList.value = []
     }

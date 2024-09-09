@@ -6,7 +6,7 @@ defineProps({
   }
 })
 </script>
-
+//商品封装成一个组件
 <template>
   <RouterLink to="/" class="goods-item">
     <img :src="goods.picture" alt="" />
